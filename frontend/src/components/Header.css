@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  margin-right: 2rem;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.nav-item {
+  list-style: none;
+  position: relative;
+  will-change: transform;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list a:hover {
+  color: aquamarine;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #333;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}
