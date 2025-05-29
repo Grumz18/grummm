@@ -12,12 +12,12 @@ function App() {
   useEffect(() => {
     fetch('https://grummm.ru/api')
       .then(response => {
-        return response.text(); // Получаем данные как текст
+        return response.text();
       })
       .then(data => {
-        console.log('Raw data received:', data); // Логируем сырые данные
+        console.log('Raw data received:', data);
         try {
-          const jsonData = JSON.parse(data); // Преобразуем в JSON
+          const jsonData = JSON.parse(data);
           setMessage(jsonData.message);
         } catch (error) {
           console.error('Failed to parse JSON:', error);
